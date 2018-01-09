@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clinic Online</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Clinic Online</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dla Pacjentów <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Pomoc w nagłych sytuacjach</a></li>
+            <li><a href="#">Jak korzystać z usług w szpitalu</a></li>
+            <li><a href="#">Telemedycyna</a></li>
+            <li><a href="#">Porady zdrowotne</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Placówki i Lekarze <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Placówki medyczne</a></li>
+            <li><a href="#">Nasi lekarze</a></li>
+            <li><a href="#">Salony optyczne</a></li>
+            <li><a href="#">Apteli</a></li>
+          </ul>
+        </li>
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">O nas <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Aktualności</a></li>
+            <li><a href="#">Zapisz się do newslettera</a></li>
+            <li><a href="#">Kariera</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a data-toggle="modal" data-target="#signupModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a data-toggle="modal" data-target="#singinModal"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="images/1.gif" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Najczęściej zadawane pytania - FAQ</h3>
+          <p>Znajdziesz tu odpowiedzi na najczęściej zadawane pytania o usługi Medicover</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/2.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Telemedycyna</h3>
+          <p>Poznaj zakres usług telemedycznych </p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/3.gif" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Przewodnik Pacjenta</h3>
+          <p>Instrukcje w jaki sposób możemy pomóc Ci w rozwiązaniu Twoich problemów zdrowotnych.</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+ <hr>
+
+
+        <footer class="row">
+            <div class="col-md-12">
+                <p>
+                    © 2018
+                </p>
+            </div>
+        </footer>
+</div>
+
+
+    <!-- Modal login-->
+    <div class="modal fade" id="singinModal" tabindex="-1" role="dialog" aria-labelledby="singinModalLabel" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="singinModalLabel">Sing in</h4>
+          </div>
+          <div class="modal-body">
+              <form action="visit.html">
+                <div class="form-group">
+                  <label for="inputEmail">Email address</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+                <hr>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal signup-->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="signupModalLabel">Sing Up</h4>
+          </div>
+          <div class="modal-body">
+              <form action="visit.html">
+                <div class="form-group">
+                  <label for="inputName">Name</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                </div>
+                   <div class="form-group">
+                  <label for="inputSurname">Surname</label>
+                  <input type="text" class="form-control" id="inputSurname" placeholder="Surname" required>
+                </div>  
+                <div class="form-group">
+                  <label for="inputEmail2">Email address</label>
+                  <input type="email" class="form-control" id="inputEmail2" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword2">Password</label>
+                  <input type="password" class="form-control" id="inputPassword2" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                  <label for="inputConfirmPassword">Confirm password</label>
+                  <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm password" required>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+                <hr>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+
+        
+    </div>
+
+</body>
+</html>
