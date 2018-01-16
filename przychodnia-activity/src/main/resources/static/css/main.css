@@ -5,3 +5,14 @@
 [class*="col-"] {
     margin-bottom: 15px;
 }
+
+.bigger {
+    font-size: 200%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
