@@ -39,8 +39,6 @@ public class HomeController {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.add("Authorization", "Basic a2VybWl0Omtlcm1pdA==");
 		String requestJson = "{\"processDefinitionId\":\"" + processId + "\"}";
-		MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
-		map.add("processDefinitionId", processId);
 		HttpEntity<String> entity = new HttpEntity<String>(requestJson, headers);
 		ResponseEntity<String> response = restTemplate.postForEntity(url, entity, String.class);
 		System.out.println(response);
