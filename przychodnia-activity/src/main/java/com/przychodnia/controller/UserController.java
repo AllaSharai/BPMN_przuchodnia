@@ -5,14 +5,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
 
 import com.przychodnia.model.User;
 import com.przychodnia.service.UserService;
@@ -22,7 +29,8 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
-
+	
+	
 	@RequestMapping(value = "registration", method = RequestMethod.GET)
 	public String registrationFormGET(Model model) {
 		model.addAttribute("user", new User());
@@ -68,5 +76,6 @@ public class UserController {
 		}
 		return "redirect:/login?logout";
 	}
+	
 
 }
