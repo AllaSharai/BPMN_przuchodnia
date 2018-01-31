@@ -4,9 +4,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="/css/main.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script th:src="@{/webjars/jquery/2.1.4/jquery.min.js}" />
+  <script th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.js}" />
 </head>
 <body>
 
@@ -67,7 +69,7 @@
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="row text-center">
       <div class="card col-md-2 col-md-offset-2">
-        <img class="card-img-top img-fluid" src="images/internista.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/internista.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <br/>
           <h4 class="card-title">Internista</h4>
@@ -76,7 +78,7 @@
       </div>
 
       <div class="card col-md-2 col-md-offset-1">
-        <img class="card-img-top img-fluid" src="images/profilaktyka.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/profilaktyka.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <h4 class="card-title">Profilaktyka i szczepienia</h4>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Zapisz się</a>
@@ -84,7 +86,7 @@
       </div>
 
       <div class="card col-md-2 col-md-offset-1">
-        <img class="card-img-top img-fluid" src="images/dermatolog.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/dermatolog.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <br/>
           <h4 class="card-title">Dermatolog</h4>
@@ -95,7 +97,7 @@
 
     <div class="row text-center">
       <div class="card col-md-2 col-md-offset-2">
-        <img class="card-img-top img-fluid" src="images/okulista.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/okulista.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <br/>
           <h4 class="card-title">Okulista</h4>
@@ -104,7 +106,7 @@
       </div>
 
       <div class="card col-md-2 col-md-offset-1">
-        <img class="card-img-top img-fluid" src="images/endokrynolog.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/endokrynolog.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <br/>
           <h4 class="card-title">Endokrynolog</h4>
@@ -113,7 +115,7 @@
       </div>
 
       <div class="card col-md-2 col-md-offset-1">
-        <img class="card-img-top img-fluid" src="images/pozostali.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/pozostali.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <h4 class="card-title">Pozostali specjaliści</h4>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Zapisz się</a>
@@ -123,7 +125,7 @@
 
     <div class="row text-center">
       <div class="card col-md-2 col-md-offset-2">
-        <img class="card-img-top img-fluid" src="images/stomatolog.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/stomatolog.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <br/>
           <h4 class="card-title">Stomatolog</h4>
@@ -132,7 +134,7 @@
       </div>
 
       <div class="card col-md-2 col-md-offset-1">
-        <img class="card-img-top img-fluid" src="images/badania.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/badania.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <h4 class="card-title">Badania</h4>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Zapisz się</a>
@@ -140,7 +142,7 @@
       </div>
 
       <div class="card col-md-2 col-md-offset-1">
-        <img class="card-img-top img-fluid" src="images/ortopeda.png" alt="Card image" style="width:100%"/>
+        <img class="card-img-top img-fluid" src="/images/ortopeda.png" alt="Card image" style="width:100%"/>
         <div class="card-img-overlay">
           <h4 class="card-title">Ortopeda i fizjoterapeuta</h4>
           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Zapisz się</a>
@@ -151,16 +153,17 @@
     <hr/>
 
 
-    <footer class="row">
-      <div class="col-md-12">
-        <p>
-          © 2018
-        </p>
-      </div>
-    </footer>
 
   </div>
 </div>
+
+<footer class="row">
+  <div class="col-md-12">
+    <p>
+      © 2018
+    </p>
+  </div>
+</footer>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
