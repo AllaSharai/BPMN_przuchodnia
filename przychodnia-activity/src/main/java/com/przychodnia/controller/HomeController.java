@@ -7,13 +7,12 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
 import com.przychodnia.model.User;
+import com.przychodnia.model.Visit;
 
 @Controller
 public class HomeController {
@@ -29,8 +28,16 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/visit/start/process", method = RequestMethod.GET)
-	public String visit() {
-		startProcess(URL, "process:6:16836");
+	public String visit(Model model) {
+	//	startProcess(URL, "process:6:16836");
+		model.addAttribute("visit", new Visit());
+		return "visit";
+	}
+	
+	@RequestMapping(value = "/visit", method = RequestMethod.GET)
+	public String visitIndex(Model model) {
+	//	startProcess(URL, "process:6:16836");
+		model.addAttribute("visit", new Visit());
 		return "visit";
 	}
 
